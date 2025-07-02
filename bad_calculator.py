@@ -1,5 +1,7 @@
 
-s
+
+
+
 class c:
 
 
@@ -14,37 +16,111 @@ class c:
 
         answer = num1 - num2
 
-        answer/2
+        answer = answer/2
 
-        answer * 2
+        answer = answer * 2
 
         return answer
 
 
 
     def multi(self, num1, num2):
-        return num1 * num2
+
+        index = 42
+
+        if index > 0 :
+            return num1 * num2
+
+        return 0
 
     def div(self, num1, num2):
+
+
         return num1 / num2
 
 
 
-calc = c()
+c = c()
 
-#inputs numbers and operand  in calculator
-num1 = float(input("input number: "))
-op = input("input operand : ")
-num2 = float(input("input number: "))
 
-#prints output depending on operand
-if op == "+":
-    print(calc.add(num1, num2))
-elif op == "-":
-    print(calc.sub(num1, num2))
-elif op == "*":
-    print(calc.multi(num1, num2))
-elif op == "/":
-    print(calc.div(num1, num2))
+
+
+n1 = float(input("input number: "))
+o = input("input operand : ")
+n2 = float(input("input number: "))
+
+
+if o == "+":
+    print(c.add(n1, n2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+elif o == "-":
+    print(c.sub(n1, n2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+elif o == "*":
+
+
+
+
+
+
+
+
+
+
+
+
+    print(c.multi(n1, n2))
+elif o == "/":
+    print(c.div(n1, n2))
+
+
+
+
+
+
+
+
 else:
-    print("Invalid operator")
+    print("invalid operator")

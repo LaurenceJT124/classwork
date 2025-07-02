@@ -23,14 +23,21 @@ num1 = float(input("first number: "))
 op = input("input operand +, -, *, / : ")
 num2 = float(input("second number: "))
 
-#prints output depending on operand
-if op == "+":
-    print(calc.add(num1, num2))
-elif op == "-":
-    print(calc.sub(num1, num2))
-elif op == "*":
-    print(calc.multi(num1, num2))
-elif op == "/":
-    print(calc.div(num1, num2))
+#Dictionary for operation select
+operations = {
+    "+": calc.add,
+    "-": calc.sub,
+    "*": calc.multi,
+    "/": calc.div
+}
+
+#selects operations
+operation_select = operations.get(op)
+
+
+#Prints out result
+if operation_select:
+    print(operation_select(num1, num2))
 else:
     print("Invalid operator")
+
